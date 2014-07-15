@@ -55,6 +55,6 @@ if __name__ == '__main__':
     folder = r'/home/username'
     zipname = r'vpsbu_'
     zipname += str(today)
-    zipname += ".zip"
+    zipname += r".zip"
     makeArchive(dirEntries(folder, True), zipname)
  

@@ -13,24 +13,19 @@
 
 #   c. Folder access as "My app needs access to files already on Dropbox". (ie: Permission Type as "Full Dropbox".)
 
-#    Then click the "generate access token" button and cut/paste into the python example below in place of <auth_token>:
+# Then click the "generate access token" button and cut/paste into the python example below in place of <auth_token>:
 
-# v01 - Moey
 
-import dropbox
+import dropbox, os
 
-client = dropbox.client.DropboxClient(<auth_token>)
-print 'linked account: ', client.account_info()
+client = dropbox.client.DropboxClient('<auth-token')
 
-f = open('working-draft.txt', 'rb')
-response = client.put_file('/moey.txt', f)
-print 'uploaded: ', response
 
-folder_metadata = client.metadata('/')
-print 'metadata: ', folder_metadata
+filelist = [ f for f in os.listdir(".") if f.endswith(".zip") ]
+# f = open(str(filelist), 'rb')
+# response = client.put_file('/', f)
+for f in filelist:
+        i = open
+        response = client.put_file
 
-f, metadata = client.get_file_and_metadata('/moey.txt')
-out = open('moey.txt', 'wb')
-out.write(f.read())
-out.close()
-print metadata
+print "uploaded:", response
