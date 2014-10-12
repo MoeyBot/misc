@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
-import glob, os
+import os
 
-filelist = glob.glob(".zip")
+filelist = [ f for f in os.listdir(".") if f.endswith(".zip") ]
 for f in filelist:
-	os.remove(f)
+    os.remove(f)
