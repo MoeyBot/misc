@@ -1,5 +1,7 @@
 #!/usr/bin/env python2.7
 
+#Source: http://null-byte.wonderhowto.com/inspiration/goodnight-byte-coding-irc-bot-python-for-beginners-0130901/
+
 import sys #List of pre-made libararies to import
 import socket
 import string
