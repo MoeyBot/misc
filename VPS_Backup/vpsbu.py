@@ -13,10 +13,6 @@ today = datetime.date.today()
  
  # First things first let's backup everything in our home directory
 def makeArchive(fileList, archive):
-    """
-    'fileList' is a list of file names - full path each name
-    'archive' is the file name for the archive with a full path
-    """
     try:
         a = zipfile.ZipFile(archive, 'w', zipfile.ZIP_DEFLATED)
         for f in fileList:
