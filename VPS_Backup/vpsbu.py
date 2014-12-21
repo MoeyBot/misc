@@ -36,7 +36,8 @@ def dirEntries(dir_name, subdir, *args):
             print "Accessing directory:", dirfile
             fileList.extend(dirEntries(dirfile, subdir, *args))
     return fileList
- 
+
+# These are the backup directly and file name info here....edit at your discretion 
 if __name__ == '__main__':
     folder = r'/home/username'
     zipname = r'vpsbu_'
@@ -65,7 +66,7 @@ client = client.DropboxClient(sess)
 f = open("zipname")
 response = client.put_file(zipname, f)
 
-# Let's delete this file locally now
+# Let's delete the local file which we just created
 filelist2 = [ f for f in os.listdir(".") if f.endswith(".zip") ]
 for f in filelist2:
     os.remove(f)
