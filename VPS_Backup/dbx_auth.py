@@ -22,4 +22,5 @@ raw_input()
 access_token = sess.obtain_access_token(request_token)
  
 #Print the token for future reference
-print access_token
+print access_token.key
+print access_token.secret
